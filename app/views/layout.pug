@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+        link(rel='shortcut icon', type='image/x-icon', href='../images/favicon.ico')
+        // Bootstrap core CSS
+        link(href='../css/bootstrap.min.css', rel='stylesheet')
+        link(href='../css/receiver.css', rel='stylesheet')
+        title='Checking from Bluepages'
+        block mycss
+    body    
+        nav.navbar.navbar-dark.fixed-top.bg-dark.flex-md-nowrap.p-0.shadow
+            a.navbar-brand.col-sm-3.col-md-2.mr-0(href='./') Checking from Bluepages
+            ul.navbar-nav.px-3
+                li.nav-item.text-nowrap
+                    a.nav-link(href='./')=intranetId
+        .container-fluid
+            .row
+                nav.col-md-2.d-none.d-md-block.bg-light.sidebar
+                    .sidebar-sticky
+                        ul.nav.flex-column
+                            li.nav-item
+                                a.nav-link.active(href='./NewCollection') New Collection
+                            li.nav-item
+                                a.nav-link.active(href='./MyDashboard') Dashboard
+                            li.nav-item
+                                a.nav-link.active(href='./ManageList') Manage List
+        block content

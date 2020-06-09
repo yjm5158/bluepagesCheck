@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+        link(rel='shortcut icon', type='image/x-icon', href='images/favicon.ico')
+        title='Checking from Bluepages'
+        // Bootstrap core CSS
+        link(href='./css/bootstrap.min.css', rel='stylesheet')
+        // Custom styles for this template
+        link(href='./css/index.css', rel='stylesheet')
+    body.text-center
+        .cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column
+            main.inner.cover(role='main')
+                .title
+                    .title-sub
+                        font(size='6') Checking from Bluepages
+                p.lead
+                form.form-horizontal(method='post', action='/bluepage/searchEmployee' enctype='multipart/form-data')
+                    .form-group
+                        label(for='upload') upload your excel here
+                        input#checkFile.form-control-file(name='checkFile',type='file',accept='.csv')
+                        input#checkFileBtn.btn.btn-primary(name='checkFileBtn',value='upload',type='button') 
+        script(type='text/javascript', src='../js/jquery.min.js')
+        script(type='text/javascript', src='../js/bluepageAPI.js')
